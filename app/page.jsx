@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-import NavBar from './component/NavBar/NavBar'
-import StartSection from './component/NavBar/Start section/StartSection'
+import StartSection from './component/Start section/StartSection'
 
 
 const Page = () => {
@@ -9,7 +7,6 @@ const Page = () => {
   return (
     <div>
       <StartSection/>
-
     </div>
   )
 }

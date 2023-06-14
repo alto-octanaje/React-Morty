@@ -1,7 +1,7 @@
 import Providers from "@/store/provider";
 import NavBar from "./component/NavBar/NavBar";
 import style from "./page.module.css"
-import StartSection from "./component/NavBar/Start section/StartSection";
+import StartSection from "./component/Start section/StartSection";
 
 export const metadata = {
   title: "Reac and Morty",
@@ -15,8 +15,6 @@ export default function RootLayout({ children }) {
       <Providers>
         <body className={style.containerFull}>
           <main >
-          <StartSection />
-          <NavBar />
           {children}
           </main>
         </body>

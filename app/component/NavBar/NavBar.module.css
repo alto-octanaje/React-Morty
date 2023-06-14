@@ -1,0 +1,30 @@
+.navbar {
+    background-color: white;
+  }
+  
+  .navbarList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbarItem {
+    margin-right: 10px;
+  }
+  
+  .navbarLink {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+  }
+  
+  .navbarLink:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  .navbarLink.active {
+    background-color: purple;
+    color: white;
+  }
+  

@@ -12,11 +12,22 @@ const StartSection = () => {
           <input type="text" className={style.input} />
           <label className={style.label}>Contraseña</label>
           <input type="password" className={style.input} />
-          <Link href='/home' >
-          <button className={style.button}>Iniciar sesión</button>
+          <Link href="/home">
+            <button className={style.button}>Iniciar sesión</button>
           </Link>
         </form>
       </div>
+      <button className={style.btn} type="button">
+        <span className={style.text}>SPACE</span>
+        <div className={style.container.stars}>
+          <div className={style.stars}></div>
+        </div>
+
+        <div className={style.glow}>
+          <div className={style.circle}></div>
+          <div className={style.circle}></div>
+        </div>
+      </button>
     </section>
   );
 };
