@@ -1,0 +1,56 @@
+.section {
+    background-color: none;
+  }
+  
+  .container {
+    background-color: rgba(34, 34, 255, .2);
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .container:hover{
+    background-color: rgba(2, 2, 117, 0.5);
+
+  }
+  
+  .heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #6200ee;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #6200ee;
+    margin-bottom: 8px;
+  }
+  
+  .input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #6200ee;
+    margin-bottom: 16px;
+  }
+  
+  .button {
+    background-color: #6200ee;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }

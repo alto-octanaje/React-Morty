@@ -1,0 +1,8 @@
+.containerFull{
+ width: 0 auto; /* establece el ancho de la página en 1000 píxeles */
+  height: 0 auto; /* establece la altura de la página en 800 píxeles */
+  margin: 0 auto; /* centra el contenido horizontalmente */
+  background: #fff url("https://www.xtrafondos.com/wallpapers/resoluciones/20/rick-y-morty-fanart-2020_2560x1440_6344.jpg")no-repeat center center fixed;
+  background-size: cover;  /*ajusta la image al tamaño de la pg*/
+  
+}
