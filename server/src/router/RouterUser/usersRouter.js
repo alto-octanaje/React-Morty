@@ -1,5 +1,5 @@
 const {Router} =require("express")
-const { getApiUsers, getUsersId,postUser }= require("../../Controllers/ControllerUser/ControllerUsers")
+const { getApiUsers, getUsersId,postUser }= require("../../handler/users/HandlerUsers")
 
 const usersRouter= Router();
 
