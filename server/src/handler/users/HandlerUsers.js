@@ -1,20 +1,32 @@
 const {
   CreateUser,
   idUser,
+  getAllUsers,
+  searchUserName
 } = require("../../Controllers/ControllerUser/ControllerUser");
 
-const getApiUsers = (req, res) => {
+const getApiUsers = async (req, res) => {
+ try {
   const { name } = req.query;
-  if (name) res.send(`esta ruta trae todos los datos que tengan ${name} `);
-  else res.send("esta ruta trae todos los datos de la api si no hay quere");
+  if (name){
+    const searchByName= await searchUserName(name)
+    res.status(200).json(searchByName)
+  } 
+  else {
+    const getAll= await getAllUsers()
+    res.status(200).json(getAll)
+
+  }
+ } catch (error) {
+    res.status(400).json({error:error.message})  
+ }
 };
 const getUsersId = async (req, res) => {
   try {
     const { id } = req.params;
     const source = isNaN(id) ? "DB" : "api";
-    
     const findID = await idUser(id, source);
-    console.log(findID);
+
     res.status(200).json(findID);
   } catch (error) {
     res.status(400).json({ error: error.message });
