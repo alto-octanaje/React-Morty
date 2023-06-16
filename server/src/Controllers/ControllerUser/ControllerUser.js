@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const { user } = require("../../db");
 const axios = require("axios");
 
@@ -15,7 +16,17 @@ const getAllUsers = async () => {
   const userApi = cleanArray(userApiRaw);
   return [...userApi, ...userDB];
 };
-const searchUserName = (name) => {};
+const searchUserName =async (name) => {
+  const nameDB= await user.findAll({where:{name}})
+  const userApiNameRaw = (
+    await axios.get("https://rickandmortyapi.com/api/character/")
+  ).data.results;
+  const userApiName=  cleanArray(userApiNameRaw);
+  const nameApi= userApiName.filter(e=>e.name===name)
+  return [...nameDB, ...nameApi]
+
+
+};
 
 const CreateUser = async (name) => {
   return await user.create({ name });
