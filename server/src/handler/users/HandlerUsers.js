@@ -3,7 +3,7 @@ const {
   idUser,
   getAllUsers,
   searchUserName
-} = require("../../Controllers/ControllerUser/ControllerUser");
+} = require("../../Controllers/UserController/UserController");
 
 const getApiUsers = async (req, res) => {
  try {

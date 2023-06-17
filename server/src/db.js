@@ -15,7 +15,7 @@ PostUser(sequelize);
 
 const { user, postUser } = sequelize.models;
 
-postUser.hasMany(user);
-user.belongsTo(postUser);
+user.hasMany(postUser );//1-N
+postUser.belongsTo(user); //N-1
 
 module.exports = { sequelize , ...sequelize.models };
