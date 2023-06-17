@@ -3,10 +3,16 @@ const { getApiUsers, getUsersId,postUser }= require("../../handler/users/Handler
 
 const usersRouter= Router();
 
+const validate=(req,res,next)=>{
+    const {name}= req.body;
+    if(!name) return res.status(400).json({error:"Missing Name" })
+    next();
+}
+
 
 usersRouter.get("/", getApiUsers)
 
 usersRouter.get("/:id",getUsersId)
-usersRouter.post("/",postUser)
+usersRouter.post("/",validate, postUser)
 
 module.exports= usersRouter;

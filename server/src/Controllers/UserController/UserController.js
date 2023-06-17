@@ -1,5 +1,5 @@
 const { where } = require("sequelize");
-const { user } = require("../../db");
+const { user, postUser } = require("../../db");
 const axios = require("axios");
 
 const cleanArray = (array) =>
@@ -16,16 +16,14 @@ const getAllUsers = async () => {
   const userApi = cleanArray(userApiRaw);
   return [...userApi, ...userDB];
 };
-const searchUserName =async (name) => {
-  const nameDB= await user.findAll({where:{name}})
+const searchUserName = async (name) => {
+  const nameDB = await user.findAll({ where: { name } });
   const userApiNameRaw = (
     await axios.get("https://rickandmortyapi.com/api/character/")
   ).data.results;
-  const userApiName=  cleanArray(userApiNameRaw);
-  const nameApi= userApiName.filter(e=>e.name===name)
-  return [...nameDB, ...nameApi]
-
-
+  const userApiName = cleanArray(userApiNameRaw);
+  const nameApi = userApiName.filter((e) => e.name === name);
+  return [...nameDB, ...nameApi];
 };
 
 const CreateUser = async (name) => {
@@ -37,7 +35,12 @@ const idUser = async (id, source) => {
     source === "api"
       ? (await axios.get(`https://rickandmortyapi.com/api/character/${id}`))
           .data
-      : await user.findByPk(id);
+      : await user.findByPk(id, {
+          include: {
+            model: postUser,
+            attributes: ["name"],
+          },
+        });
 
   return miUser;
 };
