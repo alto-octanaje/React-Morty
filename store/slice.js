@@ -5,6 +5,7 @@ export const Slice = createSlice({
     initialState:{
         nombre:'JAB',
         charactersAll:[],
+        charactersDetails:{},
     },
     reducers:{
         guardarnombre:(state,action)=>{
@@ -13,8 +14,11 @@ export const Slice = createSlice({
         },
         getAllCharacters:(state,action)=>{
             state.charactersAll=action.payload
+        },
+        findCharacterId:(state,action)=>{
+            state.charactersDetails=action.payload
         }
     } 
 })
 
-export const { guardarnombre, getAllCharacters}= Slice.actions;
+export const { guardarnombre, getAllCharacters,findCharacterId}= Slice.actions;
