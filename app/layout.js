@@ -1,7 +1,6 @@
 import Providers from "@/store/provider";
-import NavBar from "./component/NavBar/NavBar";
 import style from "./page.module.css"
-import StartSection from "./component/Start section/StartSection";
+
 
 export const metadata = {
   title: "Reac and Morty",

@@ -1,0 +1,10 @@
+.cardsContainer {
+    background-color: rgba(106, 104, 104, 0.553);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 5px;
+  }
+ 

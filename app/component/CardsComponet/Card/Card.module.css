@@ -1,0 +1,54 @@
+.theCards{
+    border: 1px solid black;
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 2em;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #bbbbbb9d;
+    word-spacing: 5px;
+    text-decoration: underline solid #bbbbbb9d;
+    
+}
+.theCards:hover{
+    background-color: #515151f7;
+    color: #ffffff;
+    transform: scale(1.09);
+    box-shadow: 0px 0px 10px 2px #4a9509;
+  }
+
+.cardTitle{
+    color: #1e1e1b;     
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.cardTitle:hover{
+    color: #eaedc3;     
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.cardData{
+    Font-weight:bold;
+    color: #171a05;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.cardData:hover{
+    color: #eaedc3;     
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cardVariable{
+    color: #171a05;     
+   text-align: justify;
+}
+.cardVariable:hover{
+    color: #eaedc3;     
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.imageActivity{
+    max-width: 100%;
+    height: 50%;
+}
+
+

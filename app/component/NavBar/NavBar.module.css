@@ -1,6 +1,32 @@
 .navbar {
-    background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-origin: border-box;
+  background-image: linear-gradient(#1c0e42, #1742dd),  linear-gradient(137.48deg, #befada 10%,#0f79d5 45%, #03318e 67%, #041568 87%);
+  background-clip: content-box, border-box;
+}
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
   }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
   
   .navbarList {
     display: flex;
