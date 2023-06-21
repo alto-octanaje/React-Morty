@@ -1,0 +1,10 @@
+.tittleC{
+ background-color: aqua;   
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.titleFavorites{
+    font-size: 30px;
+    color: aliceblue;
+}

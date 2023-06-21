@@ -15,7 +15,7 @@ export const getAllCharactersA = () => {
 export const findCharacterIdA=(id)=>{
   try {
     return async function(dispatch){
-      const res = await axios.get(`http://localhost:3001/users/${id}`);
+      const res = await axios.get(`http://localhost:3001/post/${id}`);
       dispatch(findCharacterId(res.data))
     }
   } catch (error) {

@@ -10,9 +10,7 @@ const page = () => {
   return (
     <div>
     <h2>Dog Information</h2>
-    <article className={style.container}>
-      <DetailsComponen />
-    </article>
+  
 
     <Link href="/home">
       <button className={style.buttoom}>
