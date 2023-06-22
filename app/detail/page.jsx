@@ -10,8 +10,6 @@ const page = () => {
   return (
     <div>
     <h2>Dog Information</h2>
-  
-
     <Link href="/home">
       <button className={style.buttoom}>
         <GiReturnArrow className={style.returnArrow} />

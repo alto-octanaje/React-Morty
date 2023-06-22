@@ -1,0 +1,13 @@
+.titleForm{
+    color:antiquewhite;
+    font-size: 30px;
+}
+.alertError{
+    color: chartreuse;
+    font-size: 20px;
+}
+.seeChange{
+    color: rgb(74, 143, 254);
+    font-size: 20px;
+}
+
