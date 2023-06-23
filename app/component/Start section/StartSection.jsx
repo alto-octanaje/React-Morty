@@ -17,7 +17,6 @@ const StartSection = () => {
           </Link>
         </form>
       </div>
-      
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getAllCharacters,findCharacterId } from "./slice";
+import { getAllCharacters,findCharacterId } from "./redux/slice";
 
 export const getAllCharactersA = () => {
   return async function (dispatch) {

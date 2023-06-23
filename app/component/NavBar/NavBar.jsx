@@ -4,7 +4,7 @@ import style from "./NavBar.module.css";
 const links = [
   {
     label: "Home",
-    route: "/",
+    route: "/home",
   },
   {
     label: "Favorites",

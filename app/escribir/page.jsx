@@ -1,5 +1,5 @@
 'use client'
-import { guardarnombre } from '@/store/slice';
+import { guardarnombre } from '@/store/redux/slice';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';

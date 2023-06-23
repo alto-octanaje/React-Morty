@@ -21,8 +21,12 @@ export const Slice = createSlice({
     createCharacter: (state, action) => {
       state.favorites = action.payload;
     },
-  },
+  }
 });
 
-export const { guardarnombre, getAllCharacters, findCharacterId,createCharacter } =
-  Slice.actions;
+export const {
+  guardarnombre,
+  getAllCharacters,
+  findCharacterId,
+  createCharacter,
+} = Slice.actions;

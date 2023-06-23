@@ -2,8 +2,9 @@
 import React, { useEffect } from "react";
 import NavBar from "../component/NavBar/NavBar";
 import CardsContainer from "../component/CardsComponet/CardsContainer/CardsContainer";
-import { useDispatch,} from 'react-redux';
+import { useDispatch, useSelector,} from 'react-redux';
 import { getAllCharactersA } from "@/store/action";
+import { getAllSelect } from "@/store/actions/selectAction";
 
 
 
@@ -21,8 +22,12 @@ const arry = [
 
   useEffect(()=>{
     dispatch(getAllCharactersA())
+    dispatch(getAllSelect())
   },[dispatch])
   
+  const selectOrigin= useSelector(state=> state.selection)
+  console.log(selectOrigin);
+
 
   return (
     <div>
