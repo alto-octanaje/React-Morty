@@ -5,6 +5,7 @@ import CardsContainer from "../component/CardsComponet/CardsContainer/CardsConta
 import { useDispatch, useSelector,} from 'react-redux';
 import { getAllCharactersA } from "@/store/action";
 import { getAllSelect } from "@/store/actions/selectAction";
+import { getAllCharacterA } from "@/store/actions/characterAction";
 
 
 
@@ -21,20 +22,20 @@ const arry = [
     const dispatch = useDispatch();
 
   useEffect(()=>{
-    dispatch(getAllCharactersA())
+    dispatch(getAllCharacterA())
     dispatch(getAllSelect())
   },[dispatch])
   
-  const selectOrigin= useSelector(state=> state.selection)
-  console.log(selectOrigin);
+  const allCharacter= useSelector(state=> state.character.allCharacter)
+  console.log(allCharacter);
 
 
   return (
     <div>
       <NavBar />
       <p>renderizar las cartas container cards</p>
-      <CardsContainer arry={arry} />
-      <button onClick={()=>getAllCharactersA()} >
+      <CardsContainer arry={allCharacter} />
+      <button onClick={()=>getAllCharacterA()} >
         activar
       </button>
     </div>

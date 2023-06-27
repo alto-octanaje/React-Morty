@@ -13,6 +13,8 @@
   }
   .container:hover{
     background-color: rgba(2, 2, 117, 0.5);
+    background-color: antiquewhite;
+
   }
   
 .titleForm{
@@ -26,5 +28,12 @@
 .seeChange{
     color: rgb(74, 143, 254);
     font-size: 20px;
+}
+
+.theInput{
+  /* background-color: yellow; */
+  padding: 1%;
+  color:black;
+  height: 3.2rem;
 }
 

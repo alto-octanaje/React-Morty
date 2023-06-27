@@ -7,7 +7,7 @@ export const Slice = createSlice({
     charactersAll: [],
     charactersDetails: {},
     favorites: [],
-  },
+  }, 
   reducers: {
     guardarnombre: (state, action) => {
       state.nombre = action.payload;

@@ -2,7 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 export const Select = createSlice({
   name: "selection",
   initialState: {
+    species:[],
     origin: [],
+    status: [],
+    origin:[],
+    location:[],
+    type:[],
   },
   reducers: {
     getSelectSpecies: (state, action) => {
@@ -20,6 +25,9 @@ export const Select = createSlice({
     getSelectLocation: (state, action) => {
       state.location = action.payload;
     },
+    getSelectType: (state, action) => {
+      state.type = action.payload;
+    },
   },
 });
 
@@ -29,4 +37,5 @@ export const {
   getSelectStatus,
   getSelectOrigin,
   getSelectLocation,
+  getSelectType,
 } = Select.actions;

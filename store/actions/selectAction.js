@@ -5,6 +5,7 @@ import {
   getSelectStatus,
   getSelectOrigin,
   getSelectLocation,
+  getSelectType,
 } from "../redux/selectReducer";
 
 
@@ -21,6 +22,8 @@ export const getAllSelect = () => {
       dispatch(getSelectOrigin(origin.data));
       const location = await axios.get("http://localhost:3001/select/location");
       dispatch(getSelectLocation(location.data));
+      const type = await axios.get("http://localhost:3001/select/type");
+      dispatch(getSelectType(type.data));
     } catch (error) {
       console.log(error);
     }
