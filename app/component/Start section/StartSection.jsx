@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./StartSection.module.css";
 import Link from "next/link";
+// import { useForm } from "react-hook-form";
 
 const StartSection = () => {
   return (
@@ -12,7 +13,17 @@ const StartSection = () => {
           <input type="text" className={style.input} />
           <label className={style.label}>Contraseña</label>
           <input type="password" className={style.input} />
-          <Link href="/home">
+          
+          
+          {/* <div>
+              <label>pais:</label>
+              <select {...register("pais")}>
+                <option value="es">español</option>
+                <option value="it">italia</option>
+                <option value="fr">francia</option>
+              </select>
+            </div> */}
+            <Link href="/home">
             <button className={style.button}>Iniciar sesión</button>
           </Link>
         </form>

@@ -3,7 +3,9 @@ import style from "./From.module.css";
 import { useForm } from "react-hook-form";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { postCreateCharacterA } from "@/store/actions/characterAction";
+import { editData } from "./validate"; 
 const top100Films = [
   "The Shawshank Redemption",
   "The Godfather",
@@ -16,6 +18,9 @@ const top100Films = [
 
 
 const Form = ({stateSelection}) => {
+  const dispatch= useDispatch();
+  const isUrl = /^(ftp|http|https):\/\/[^ "]+$/;
+  const isImg = /\.(jpeg|jpg|png|gif)$/i
   const {species,gender,status,origin,location,type}=stateSelection;
   const {
     register,
@@ -26,21 +31,14 @@ const Form = ({stateSelection}) => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-
       email: "jeissonolwen@gmail.com",
       name:"jeisson"
     },
   });
+const token= "146d827c-b83a-4ae4-9e6d-79dd84180e4e"
+
   const onSubmit = (data) => (
-    // data.name,
-    // data.email,
-    // data.Species.id  ,
-    // data.Gender.id ,
-    // data.status.id ,
-    // data.origin.id ,
-    // data.location.id, 
-    console.log(data)
-    
+    dispatch(postCreateCharacterA(editData(data)))
   )
 
   const handleAutocompleteChange = (field , value) => {
@@ -76,19 +74,24 @@ const Form = ({stateSelection}) => {
               )}
             </div>
             <div>
-              <TextField
+            <TextField
                 id="outlined-basic"
-                label="New Name"
+                label="Url Image"
                 variant="outlined"
-                {...register("email", {
+                {...register("image", {
                   required: true,
-                  pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/,
+                  pattern:{
+                    value:isUrl,
+                    message:"debe ser una URL"
+                  },
+                  validate:{
+                    isImage:(value)=> isImg.test(value)||"Ingrese URL de una IMAGEN "
+                  }
                 })}
               />
-              {errors.email?.type === "pattern" && (
-                <p className={style.alertError}>El Campo email no es valido</p>
-              )}
+              {errors.image&& <p className={style.alertError}>{errors.image.message}</p> }
             </div>
+         
 
             <Autocomplete
               disablePortal
@@ -171,14 +174,7 @@ const Form = ({stateSelection}) => {
              
             />
 
-            <div>
-              <label>pais:</label>
-              <select {...register("pais")}>
-                <option value="es">español</option>
-                <option value="it">italia</option>
-                <option value="fr">francia</option>
-              </select>
-            </div>
+            
             <input type="submit" value="Enviar" />
           </form>
           <p className={style.seeChange}>Nombre: {watch("nombre")} </p>

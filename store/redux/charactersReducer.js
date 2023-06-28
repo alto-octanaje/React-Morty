@@ -7,9 +7,13 @@ export const CharacterR = createSlice({
         reducers:{
             getAllCharacter:(state,action)=>{
                 state.allCharacter=action.payload;
+            },
+            postCreateCharacter:(state,action)=>{
+                state.allCharacter=action.payload;
             }
         }
 })
 export const {
     getAllCharacter,
+    postCreateCharacter,
 }= CharacterR.actions;
