@@ -27,7 +27,7 @@ const Favorites = () => {
     const array=[]
   return (
     <main >
-        <div className={style.tittleC} ><h1 className={style.titleFavorites} >my favorites</h1></div>
+        {/* <div className={style.tittleC} ><h1 className={style.titleFavorites} >my favorites</h1></div> */}
         {
           seeForm
           ?<> <CardsContainer arry={array} /> <button onClick={changeState} >create charater</button></> 
