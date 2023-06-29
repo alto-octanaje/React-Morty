@@ -5,7 +5,7 @@ export const Select = createSlice({
     species:[],
     origin: [],
     status: [],
-    origin:[],
+    gender:[],
     location:[],
     type:[],
   },

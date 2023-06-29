@@ -8,3 +8,29 @@
     font-size: 30px;
     color: aliceblue;
 }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #6db0f3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 3%;
+  }
+  
+  .button:hover {
+    background-color: #318ce7;
+    color:black
+  }
+
+.tittleSectionFavorite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: bisque;
+    font-size: 50px;
+}
+  

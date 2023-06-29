@@ -2,14 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 export const CharacterR = createSlice({
     name:"character",
         initialState:{
-            allCharacter:[]
+            allCharacter:[],
+            seeCharacter:[],
         },
         reducers:{
             getAllCharacter:(state,action)=>{
                 state.allCharacter=action.payload;
             },
             postCreateCharacter:(state,action)=>{
-                state.allCharacter=action.payload;
+                state.seeCharacter=action.payload;
             }
         }
 })

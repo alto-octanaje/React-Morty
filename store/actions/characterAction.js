@@ -15,8 +15,7 @@ export const  postCreateCharacterA =(newCharacter)=>{
     return async function (dispatch) {
         try {
             const character =(await axios.post("http://localhost:3001/post",newCharacter))
-            console.log(character.data);
-            // dispatch(postCreateCharacter(charater.data))
+            dispatch(postCreateCharacter(character.data))
         } catch (error) {
             console.log(error);
         }
