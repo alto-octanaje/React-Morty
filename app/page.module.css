@@ -6,3 +6,15 @@
   background-size: cover;  /*ajusta la image al tamaño de la pg*/
   
 }
+
+
+.button {
+  background-color: #6200ee;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

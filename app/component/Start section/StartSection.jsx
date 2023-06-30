@@ -13,8 +13,7 @@ const StartSection = () => {
           <input type="text" className={style.input} />
           <label className={style.label}>Contraseña</label>
           <input type="password" className={style.input} />
-          
-          
+
           {/* <div>
               <label>pais:</label>
               <select {...register("pais")}>
@@ -23,7 +22,7 @@ const StartSection = () => {
                 <option value="fr">francia</option>
               </select>
             </div> */}
-            <Link href="/home">
+          <Link href="/home">
             <button className={style.button}>Iniciar sesión</button>
           </Link>
         </form>

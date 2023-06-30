@@ -1,5 +1,6 @@
 import Providers from "@/store/provider";
 import style from "./page.module.css"
+import { UserContext } from "./context/UserContext";
 
 
 export const metadata = {
@@ -12,11 +13,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head></head>
       <Providers>
+        <UserContext >
         <body className={style.containerFull}>
           <main >
           {children}
           </main>
         </body>
+        </UserContext>
       </Providers>
     </html>
   );
