@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './page.module.css'
 import { GiReturnArrow } from "react-icons/gi";
-import DetailsComponen from '../component/Detail/DetailsComponen';
 import Link from 'next/link';
 
 

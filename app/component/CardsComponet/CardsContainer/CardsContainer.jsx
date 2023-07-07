@@ -16,11 +16,11 @@ const CardsContainer = ({arry}) => {
         arry.map((e, i) => {
           return (
             <Card
-              key={i}
+              key={e?.id}
               id={e?.id}
-              name={e?.name}
-              spacies={e?.spacies}
-              gender={e?.gender}
+              name={e?.name }
+              species={ typeof e?.species==="string" ? e?.species : e?.species.name  }
+              gender={ typeof e?.gender==="string" ? e?.gender : e?.gender.name  }
               image={e?.image}
             />
           );
