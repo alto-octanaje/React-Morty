@@ -2,14 +2,9 @@ import React from 'react';
 import style from './BackButton.module.css';
 import Link from 'next/link';
 
-
-
 export default function BackButton() {
 
-
-
   return (
-    <>
       <div className={style.containerButonBack}>
         <Link href='/' onClick={() => history.back()}>
           <button className={style.backButton}>
@@ -26,6 +21,6 @@ export default function BackButton() {
           </button>
         </Link>
       </div>
-    </>
+
   );
 }

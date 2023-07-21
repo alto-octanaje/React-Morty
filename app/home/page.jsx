@@ -6,6 +6,7 @@ import { useDispatch, useSelector,} from 'react-redux';
 import { getAllCharactersA } from "@/store/action";
 import { getAllSelect } from "@/store/actions/selectAction";
 import { getAllCharacterA } from "@/store/actions/characterAction";
+import style from './home.module.css'
 
 
 
@@ -31,7 +32,7 @@ const arry = [
 
 
   return (
-    <div>
+    <div className={style.mainC} >
       <NavBar />
       <p>renderizar las cartas container cards</p>
       <CardsContainer arry={allCharacter} />

@@ -8,8 +8,6 @@ const CardsContainer = ({arry}) => {
   // const charactersAll= useSelector(state=> state.valores.charactersAll)
   // console.log(charactersAll);
 
-  
-
   return (
     <div className={style.cardsContainer}>
       {arry.length > 0 ?
@@ -19,8 +17,8 @@ const CardsContainer = ({arry}) => {
               key={e?.id}
               id={e?.id}
               name={e?.name }
-              species={ typeof e?.species==="string" ? e?.species : e?.species.name  }
-              gender={ typeof e?.gender==="string" ? e?.gender : e?.gender.name  }
+              species={ typeof e?.species==="string" ? e?.species : e?.species?.name  }
+              gender={ typeof e?.gender==="string" ? e?.gender : e?.gender?.name  }
               image={e?.image}
             />
           );

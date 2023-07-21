@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Detail.module.css";
-
+import ImageDetail from "./imagen/ImageDetail";
+ 
 const Detail = ({
   name,
   status,
@@ -13,10 +14,8 @@ const Detail = ({
 }) => {
   return (
     <article className={style.container}>
-      <div className={style.containerImagen}>
-        <img src={image} alt={name} className={style.image} />
-      </div>
-      <section>
+      <ImageDetail image={image} name={name} />
+      <section className={style.sectionC}>
         <h1 size={50} className={style.title}>
           Details
         </h1>
