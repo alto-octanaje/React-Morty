@@ -14,21 +14,21 @@ const Detail = ({
 }) => {
   return (
     <article className={style.container}>
+      <h1 size={50} className={style.title_2}>
+          {name}
+        </h1>
       <ImageDetail image={image} name={name} />
       <section className={style.sectionC}>
-        <h1 size={50} className={style.title}>
-          Details
-        </h1>
-        <p>
-          <span className={style.styleDitailsData}>name: </span>
+        <h1 size={50} className={style.title_1}>
           {name}
-        </p>
-        <p>
+        </h1>
+      
+        <p className={style.parrafo}>
           <span className={style.styleDitailsData}>status: </span>
           {status}
         </p>
 
-        <p>
+        <p className={style.parrafo}>
           <span className={style.styleDitailsData}>species: </span>
           {species}
         </p>
