@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
 .container {
   display: flex;
   justify-content: center;
@@ -5,70 +7,104 @@
   margin: 1rem auto;
   border-radius: 0.25rem;
   max-width: 1170px;
-  box-shadow: 22px 30px 10px rgba(21, 21, 21, 0.1);
+  background-color: #515151f7;
+  box-shadow: -2px -3px 23px 1px #a3ff32;
+  padding: 0.5%;
 }
+
+.container:hover {
+  background-color: #131313f7;
+}
+.title_1 {
+  color: #ccd647;
+  text-align: center;
+}
+
+.container:hover .sectionC .title_1 {
+  color: #ccd647;
+  
+}
+
 .title_2 {
   display: none;
 }
-@media screen and (max-width:600px) {
-  .container{
-    background-color: none;
-    /* flex-direction: column; */
-  }
 
+@media screen and (max-width:600px) {
+  .container {
+    background-color: none;
+    flex-direction: column;
+    align-items: center;
+  }
   .title_1 {
+    text-align: center;
     display: none;
   }
+  .title_2 {
+    text-align: center;
+    display: block;
+  }
   
+  .parrafo {   
+    font-size: 10px;
+
+  }
+  .sectionC {
+    background-color: none;
+    width: 10px;
+    margin-left: 0px;
+    justify-content:space-between;
+    align-items: left;
+   
+  }
 }
-.sectionC{
-  background-color: blue;
+@media screen and (min-width:600px) {
+  .sectionC{
+  background-color: #898d84;
+  }
+}
+
+.sectionC {
   width: 400px;
   margin-left: 3px;
-}
-
-.styleDitails {
-  align-items: center;
-  text-align: left;
-  color: rgb(4, 37, 5);
+  display: flex;
   flex-direction: column;
-  padding: 0rem 1rem;
-  border: 2px solid #eae6eb;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
-
-.styleDitails span {
-  margin-right: 0.5rem;
+  
 }
 
 .styleDitailsData {
   background: linear-gradient(70deg, #595656 50%, #8a8383dc 90%);
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.2rem;
   border-radius: 0.25rem;
   color: #000000;
 }
+
 .title_2 {
-  font-family: "Pacifico", cursive;
-  color: rgb(90, 164, 5);
+  color: #ccd647;
+  font-family: 'UnifrakturMaguntia', cursive;
   font-size: 50px;
   margin: 20px;
   flex: content;
 }
-
 
 .title_1 {
-  font-family: "Pacifico", cursive;
-  color: rgb(90, 164, 5);
+  color: #e1e697;
+  font-family: 'UnifrakturMaguntia', cursive;
   font-size: 50px;
   margin: 20px;
   flex: content;
 }
-.parrafo{
+
+.parrafo {
   font-weight: bold;
   text-transform: capitalize;
-  line-height: 1.8;
-  font-size: 28px;
-  background-color: red;
+  font-size: 24px;
+  padding: 0.5rem;
+  overflow: hidden; 
+  margin: 0.1px;
+
+}
+
+.parrafo:hover {
+  background-color:  #131313f7;
 }

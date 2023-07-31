@@ -19,24 +19,23 @@ const page = ({ params }) => {
   useEffect(() => {
     dispatch(findCharacterIdA(id));
   }, [dispatch]);
-  
-
 
   return (
     <>
-    <NavBar />
-    <Detail 
-    key={id} 
-    name={name}
-    image={image}
-    status={typeof status==="string" ? status : status?.name }
-    species={typeof species==="string" ? species: species?.name }
-    type={typeof type==="string" ? type: type?.name }
-    gender={typeof gender==="string" ? gender: gender?.name }
-    origin={typeof origin==="string" ? origin: origin?.name }
-    location={typeof location==="string" ? location: location?.name }
-    />
-    <BackButton/>
+      <NavBar />
+
+      <Detail
+        key={id}
+        name={name}
+        image={image}
+        status={typeof status === "string" ? status : status?.name}
+        species={typeof species === "string" ? species : species?.name}
+        type={typeof type === "string" ? type : type?.name}
+        gender={typeof gender === "string" ? gender : gender?.name}
+        origin={typeof origin === "string" ? origin : origin?.name}
+        location={typeof location === "string" ? location : location?.name}
+      />
+      <BackButton />
     </>
   );
 };

@@ -291,15 +291,15 @@ const Form = ({ stateSelection }) => {
               </div>
               <div className={style.details}>
                 <h3 className={style.tittleText}>
-                  Specie {speciesValue?.name}
+                  Specie: {speciesValue?.name}
                 </h3>
-                <h3 className={style.tittleText}>Gender {genderValue?.name}</h3>
-                <h3 className={style.tittleText}>Status {statusValue?.name}</h3>
-                <h3 className={style.tittleText}>Origin {originValue?.name}</h3>
+                <h3 className={style.tittleText}>Gender: {genderValue?.name}</h3>
+                <h3 className={style.tittleText}>Status: {statusValue?.name}</h3>
+                <h3 className={style.tittleText}>Origin: {originValue?.name}</h3>
                 <h3 className={style.tittleText}>
-                  Location {locationValue?.name}
+                  Location: {locationValue?.name}
                 </h3>
-                <h3 className={style.tittleText}>Type {typeValue?.name}</h3>
+                <h3 className={style.tittleText}>Type: {typeValue?.name}</h3>
               </div>
             </div>
           </div>

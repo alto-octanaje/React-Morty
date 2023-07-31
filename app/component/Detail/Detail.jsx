@@ -22,32 +22,27 @@ const Detail = ({
         <h1 size={50} className={style.title_1}>
           {name}
         </h1>
-      
         <p className={style.parrafo}>
-          <span className={style.styleDitailsData}>status: </span>
-          {status}
+          <span className={style.styleDitailsData}>status: {status}</span> 
         </p>
-
         <p className={style.parrafo}>
-          <span className={style.styleDitailsData}>species: </span>
-          {species}
+          <span className={style.styleDitailsData}>species: {species}</span>
         </p>
-        <p>
-          <span className={style.styleDitailsData}>gender: </span>
-          {gender}
-        </p>
-        <p>
-          <span className={style.styleDitailsData}>type: </span>
-          {type}
-        </p>
-        <p>
-          <span className={style.styleDitailsData}>origin: </span>
-          {origin}
-        </p>
-        <p>
-          <span className={style.styleDitailsData}>Location: </span>
-          {location}
-        </p>
+           <p className={style.parrafo}>
+            <span className={style.styleDitailsData}>gender: {gender}</span>            
+          </p>          
+          <p className={style.parrafo}>
+            <span className={style.styleDitailsData}>type: {type}</span>
+            
+          </p>
+          
+          <p className={style.parrafo}>
+            <span className={style.styleDitailsData}>origin: {origin}</span>            
+          </p>
+         
+          <p className={style.parrafo}> 
+            <span className={style.styleDitailsData}>Location: {location}</span>            
+          </p> 
       </section>
     </article>
   );
